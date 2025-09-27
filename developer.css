@@ -1,0 +1,99 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
+
+body {
+    background: linear-gradient(135deg, #434344, #1f1f21);
+    color: #f0f0f5;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0 20px 40px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+nav {
+    text-align: left;
+    padding: 20px 0;
+}
+
+#home {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #a0c4ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#home:hover {
+    color: #72a0ff;
+    text-decoration: underline;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.8em;
+    margin: 0 0 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+header h2 {
+    font-weight: 400;
+    font-size: 1.8em;
+    margin: 0 0 40px;
+    color: #d0d0d5;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: left;
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #a0c4ff;
+    border-bottom: 2px solid #72a0ff;
+    padding-bottom: 8px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    color: #e0e0e8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+ul li strong {
+    color: #f9ca24;
+}
+
+ul li:hover {
+    background: rgba(114, 160, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.8em;
+    }
+
+    header h2, ul li {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 0 10px;
+    }
+}

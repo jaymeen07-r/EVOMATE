@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Evomate</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("GgHeC8c6M0Jbez6Ug");
+    })();
+  </script>
+</head>
+
+<body>
+  <nav>
+    <a id="home" href="index.html">← Home</a>
+  </nav>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p class="subtitle">Got feedback, ideas, or just want to say hi? We'd love to hear from you </p>
+
+    <form id="contact-form" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="social-section">
+      <h3>Contact Us On</h3>
+      <div class="social-links">
+        <a href="mailto:evomate.team@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/evomate-team-29a8a6381" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/evomate__" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_ndvyson", "template_m2axjit", this)
+      .then(() => {
+        this.reset();
+      }, (error) => {
+        alert("Failed to send message. Please try again.");
+        console.error("EmailJS Error:", error);
+      });
+  });
+</script>
+
+</html>

@@ -1,0 +1,85 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>evomate.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.jpg" type="image/jpg">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="home-link">
+            <a href="index.html">Home</a>
+        </div>
+        <div class="services-link">
+            <a href="services.html">Services</a>
+        </div>
+        <div class="about-link">
+            <a href="about.html">About</a>
+        </div>
+        <div class="contact-link">
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <hr>
+    <div id="main-container">
+        <h1 id="welcome_message">Welcome To EVOMATE</h1>
+        <h2 id="main_dialoge"> The Soul of Your System </h2>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." id="searchInput" class="search-input" />
+            <button class="search-btn">
+                search
+            </button>
+        </div>
+        <br><br>
+        <a id="developer-section" href="developer.html" class="btn-primary" role="button">Explore More</a>
+    </div>
+    <div id="sub-container">
+        <h1>Our Mission</h1>
+        <h3 id="sub-container-data">At Evomate, our mission is to revolutionize the way users interact with technology
+            by creating
+            emotionally intelligent and modular systems that adapt to individual needs. We strive to enhance user
+            experiences through innovative design, seamless integration, and reliable performance, making technology
+            more intuitive, personal, and accessible for everyone.</h3>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Evomate. All Rights Reserved. | Design and Developed by <a id="jnv"
+                href="https://jaymeenvaghela.com/" target="_blank">JAYMEEN VAGHELA</a></p>
+    </div>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const message = "Welcome To EVOMATE";
+        const target = document.getElementById("welcome_message");
+
+        function typeWriter(index = 0) {
+            if (index === 0) target.textContent = ""; // Clear before typing
+            if (index < message.length) {
+                target.textContent += message.charAt(index);
+                setTimeout(() => typeWriter(index + 1), 100); // Typing speed
+            } else {
+                setTimeout(() => typeWriter(0), 2000); // Wait 2s then restart
+            }
+        }
+
+        typeWriter();
+    });
+</script>
+<script>
+    const input = document.getElementById("searchInput");
+
+    input.addEventListener("mouseenter", () => {
+        input.placeholder = "Type for search...";
+    });
+
+    input.addEventListener("mouseleave", () => {
+        input.placeholder = "Search...";
+    });
+</script>
+
+
+</html>
